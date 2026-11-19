@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parabéns! 21.000MT Bónus no Aviator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0b0710;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(235, 20, 96, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(245, 140, 56, 0.16) 0%, transparent 50%);
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+    }
+
+    /* Cabeçalho de parabéns no topo */
+    .congrats-banner {
+      background: linear-gradient(180deg, rgba(35, 18, 52, 0.98) 0%, rgba(18, 11, 28, 0.98) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .congrats-badge {
+      background: linear-gradient(90deg, rgba(255, 140, 36, 0.18) 0%, rgba(235, 20, 96, 0.22) 100%);
+      border: 1px solid rgba(255, 180, 90, 0.35);
+    }
+
+    /* Título elegante com brilho suave */
+    .title-gradient {
+      background: linear-gradient(90deg, #ff9d42 0%, #ff4b7d 50%, #c850c0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 18px rgba(255, 75, 125, 0.28));
+    }
+
+    /* Moldura elegante das imagens */
+    .img-card {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    .img-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+    }
+
+    /* Secções com efeito vidro escuro (Glassmorphism) */
+    .glass-section {
+      background: linear-gradient(180deg, rgba(24, 16, 34, 0.96) 0%, rgba(14, 9, 20, 0.98) 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+
+    /* Estrutura base dos botões (completamente estáticos/imóveis) */
+    .btn-cta {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+      letter-spacing: 0.03em;
+    }
+
+    /* Reflexo rápido atravessando o botão sem o mover */
+    .btn-cta::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 55%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.85) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-25deg);
+      animation: fastShine 0.65s infinite linear;
+    }
+
+    /* Botão superior: Laranja Dourado -> Rosa Rubi */
+    .btn-top {
+      background: linear-gradient(135deg, #ff8c24 0%, #eb1460 100%);
+      animation: fastLightPulseTop 0.25s infinite alternate ease-in-out;
+    }
+
+    /* Botão inferior: Rosa Rubi -> Laranja Dourado */
+    .btn-bottom {
+      background: linear-gradient(135deg, #eb1460 0%, #ff8c24 100%);
+      animation: fastLightPulseBottom 0.25s infinite alternate ease-in-out;
+    }
+
+    /* Pisca-pisca rápido apenas na luz/brilho (0% de movimento) - Topo */
+    @keyframes fastLightPulseTop {
+      0% {
+        filter: brightness(0.75);
+        box-shadow: 0 0 4px rgba(235, 20, 96, 0.2);
+      }
+      100% {
+        filter: brightness(1.6);
+        box-shadow: 0 0 28px rgba(255, 255, 255, 0.75), 0 0 50px rgba(235, 20, 96, 1);
+      }
+    }
+
+    /* Pisca-pisca rápido apenas na luz/brilho (0% de movimento) - Fundo */
+    @keyframes fastLightPulseBottom {
+      0% {
+        filter: brightness(0.75);
+        box-shadow: 0 0 4px rgba(255, 140, 36, 0.2);
+      }
+      100% {
+        filter: brightness(1.6);
+        box-shadow: 0 0 28px rgba(255, 255, 255, 0.75), 0 0 50px rgba(255, 140, 36, 1);
+      }
+    }
+
+    /* Feixe de luz rápido */
+    @keyframes fastShine {
+      0% {
+        left: -120%;
+      }
+      100% {
+        left: 170%;
+      }
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center min-h-screen sm:py-6">
+
+  <!-- Container Principal -->
+  <main class="w-full max-w-[460px] bg-[#120d18] sm:rounded-3xl sm:border sm:border-white/10 shadow-[0_20px_70px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col">
+
+    <!-- 0. Texto de Parabéns no Princípio -->
+    <header class="congrats-banner px-6 pt-7 pb-6 text-center flex flex-col items-center">
+      <div class="congrats-badge inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
+        <span>🎉</span>
+        <span>Parabéns • Bónus Aviator</span>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug mb-2">
+        Parabéns! <span class="text-amber-400">21.000MT</span> bónus no Aviator
+      </h2>
+
+      <p class="text-sm text-gray-200 leading-relaxed max-w-[390px]">
+        Recebe <span class="text-emerald-400 font-bold">5250.00MT</span> no seu primeiro depósito de <span class="text-amber-300 font-bold">1750MT</span> e deixar voar até <span class="text-pink-400 font-extrabold">3X</span>. Cria tua conta!
+      </p>
+    </header>
+
+    <!-- 1. Primeira Imagem -->
+    <a href="https://media1.placard.co.mz/redirect.aspx?pid=3489&bid=1514" class="img-card">
+      <img 
+        src="https://i.im.ge/QQyupXY/1000253770.jpg" 
+        alt="1000253770" 
+        class="w-full h-auto block object-cover"
+      />
+    </a>
+
+    <!-- 2. Secção do Primeiro Botão (Abaixo da 1ª imagem) -->
+    <section class="glass-section px-6 py-8 flex flex-col items-center text-center">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-semibold uppercase tracking-widest text-amber-300/90 mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        Plataforma Oficial • Moçambique
+      </span>
+
+      <h1 class="title-gradient text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">
+        Aviator Game
+      </h1>
+
+      <a 
+        href="https://media1.placard.co.mz/redirect.aspx?pid=3489&bid=1514" 
+        class="btn-cta btn-top w-full py-4 px-6 rounded-2xl text-white font-extrabold text-lg sm:text-xl flex items-center justify-center gap-2.5"
+      >
+        <span>Criar conta</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- 3. Segunda Imagem -->
+    <a href="https://media1.placard.co.mz/redirect.aspx?pid=3489&bid=1514" class="img-card">
+      <img 
+        src="https://i.im.ge/QQyuviD/1000253771.jpg" 
+        alt="5.000 MT Apostas grátis diárias" 
+        class="w-full h-auto block object-cover"
+      />
+    </a>
+
+    <!-- 4. Terceira Imagem (Substituída pela imagem nova) -->
+    <a href="https://media1.placard.co.mz/redirect.aspx?pid=3489&bid=1514" class="img-card">
+      <img 
+        src="https://i.im.ge/QQyFoKm/1000253792.jpg" 
+        alt="1000253792" 
+        class="w-full h-auto block object-cover"
+      />
+    </a>
+
+    <!-- 5. Secção do Segundo Botão (No fundo) -->
+    <footer class="glass-section px-6 pt-8 pb-10 flex flex-col items-center text-center">
+      <a 
+        href="https://media1.placard.co.mz/redirect.aspx?pid=3489&bid=1514" 
+        class="btn-cta btn-bottom w-full py-4 px-6 rounded-2xl text-white font-extrabold text-lg sm:text-xl flex items-center justify-center gap-2.5 mb-4"
+      >
+        <span>Criar conta</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+
+      <p class="text-gray-300/80 text-xs sm:text-sm font-medium tracking-wide">
+        Clique no botão para se registar e começar a jogar
+      </p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
